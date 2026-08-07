@@ -10,10 +10,9 @@
 
 ### 使用前准备
 
-1. 安装或下载 [Android SDK Platform-Tools](https://developer.android.com/tools/releases/platform-tools)。
-2. 将下载包中的整个 `platform-tools` 文件夹放到本项目根目录，确保存在 `platform-tools/adb.exe`。也可将 `adb` 加入系统 `PATH`。
-3. 在手机上开启开发者选项、USB 调试和“启用蓝牙 HCI 信息收集日志”（系统名称可能略有不同）。
-4. 用支持数据传输的 USB 线连接手机，并在手机上允许 USB 调试授权。
+1. 解压本项目。项目已包含 Android SDK Platform-Tools 和 `adb.exe`，无需安装 Android Studio 或单独配置 ADB。
+2. 在手机上开启开发者选项、USB 调试和“启用蓝牙 HCI 信息收集日志”（系统名称可能略有不同）。
+3. 用支持数据传输的 USB 线连接手机，并在手机上允许 USB 调试授权。
 
 ### 导出步骤
 
@@ -39,10 +38,9 @@ It works with Android devices that support Bluetooth HCI logging and ADB `bugrep
 
 ### Before you start
 
-1. Download [Android SDK Platform-Tools](https://developer.android.com/tools/releases/platform-tools).
-2. Put the extracted `platform-tools` directory beside this README so that `platform-tools/adb.exe` exists. Alternatively, make `adb` available on `PATH`.
-3. On the phone, enable Developer options, USB debugging, and Bluetooth HCI logging.
-4. Connect the phone with a data-capable USB cable and accept the USB debugging prompt.
+1. Extract this project. It already includes Android SDK Platform-Tools and `adb.exe`; Android Studio and a separate ADB installation are not required.
+2. On the phone, enable Developer options, USB debugging, and Bluetooth HCI logging.
+3. Connect the phone with a data-capable USB cable and accept the USB debugging prompt.
 
 ### Export a log
 
@@ -62,7 +60,7 @@ The source `bugreport` and note are also stored under `exports/`. They can conta
 
 ## Project scope and license
 
-This repository contains only the launcher and PowerShell script. It intentionally excludes generated logs and Android Platform-Tools binaries.
+This repository includes the launcher, PowerShell script, and Android SDK Platform-Tools required for offline use. It intentionally excludes generated logs.
 
 The project source code is released under the [MIT License](LICENSE). See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for the separately distributed tools used by this project.
 

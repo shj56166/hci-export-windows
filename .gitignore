@@ -4,9 +4,6 @@ hci-*/
 HCI日志-*.zip
 *.log
 
-# Android SDK Platform-Tools is downloaded separately; do not redistribute it here.
-platform-tools/
-
 # Editor and operating-system files.
 .DS_Store
 Thumbs.db

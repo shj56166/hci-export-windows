@@ -135,11 +135,10 @@ $bugreportPath = Join-Path $exportDir 'bugreport.zip'
 $notePath = Join-Path $exportDir 'export-note.txt'
 $finalPackagePath = Join-Path $scriptDir "HCI日志-$stamp.zip"
 
-Write-Host '请先完成蓝牙测试流程，例如：'
-Write-Host '1. 打开 App 或小程序。'
-Write-Host '2. 连接控制器或 BMS。'
-Write-Host '3. 停留在目标页面，并按测试要求操作车辆。'
-Write-Host '4. 断开连接或结束测试。'
+Write-Host '请先完成需要记录的蓝牙操作，例如：'
+Write-Host '1. 打开需要测试的应用或设备。'
+Write-Host '2. 执行需要记录的蓝牙连接、通信或断开操作。'
+Write-Host '3. 复现需要分析的现象，或完成测试流程。'
 Write-Host ''
 Read-Host '完成后按回车开始导出 bugreport'
 
@@ -204,7 +203,7 @@ if ($snoopMatches.Count -gt 0) {
 } else {
   Write-Host ''
   Write-Host '没有在 bugreport 中找到 btsnoop_hci.log。'
-  Write-Host '导出已完成，但缺少 BLE 分析需要的 HCI 日志。'
+  Write-Host '导出已完成，但缺少蓝牙协议分析需要的 HCI 日志。'
   Write-Host '请在手机上开启“蓝牙 HCI 信息收集日志”，重启蓝牙，重新完成测试流程后再导出。'
   $note += '没有在 bugreport 中找到 btsnoop_hci.log。'
   $note += '请开启蓝牙 HCI 日志，重启蓝牙，重新完成测试流程后再导出。'
@@ -238,5 +237,5 @@ if ($exportSucceeded) {
 }
 
 Write-Host '由于没有找到 HCI 日志，需要重新导出。'
-Write-Host '当前生成的 HCI日志 zip 已保留，但通常不能用于 BLE 协议分析。'
+Write-Host '当前生成的 HCI日志 zip 已保留，但通常不能用于蓝牙协议分析。'
 Pause-And-Exit 2

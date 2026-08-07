@@ -1,6 +1,6 @@
 # 双击运行
 
-请先按 [README.md](README.md) 的“使用前准备”下载并放置 Android Platform-Tools，然后双击：
+本工具已包含 ADB。解压后双击：
 
 ```text
 run-export.cmd
